@@ -1,1 +1,2 @@
-https://github.com/anikdey72196-ops/Personal-Blog-.git
+# Personal-Blog-
+https://roadmap.sh/projects/personal-blog
