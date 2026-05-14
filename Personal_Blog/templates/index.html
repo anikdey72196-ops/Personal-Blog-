@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Personal Blog {% if is_admin %}- Admin{% else %}- Home{% endif %}{% endblock %}
+
+{% block content %}
+<h1>
+    <a href="{% url 'index' %}" class="header-link">Personal Blog</a>
+    {% if is_admin %}
+    <a href="{% url 'add_Blog' %}" class="btn btn-add">+ Add</a>
+    {% endif %}
+</h1>
+
+<ul class="article-list">
+    {% for blog in Blogs %}
+    <li class="article-item">
+        <a href="{% url 'article_detail' blog.id %}">{{ blog.title }}</a>
+        
+        {% if is_admin %}
+        <span class="article-actions">
+            <a href="{% url 'edit_Blog' blog.id %}">Edit</a>
+            <a href="{% url 'delete_Blog' blog.id %}">Delete</a>
+        </span>
+        {% else %}
+        <span class="article-date">{{ blog.date|date:"F j, Y" }}</span>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li>No articles found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

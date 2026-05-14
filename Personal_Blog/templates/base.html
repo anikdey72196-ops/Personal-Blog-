@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Personal Blog{% endblock %}</title>
+    <style>
+        /* Import a marker-style font to match the wireframe */
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Kalam:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Kalam', cursive; /* playful, marker-like font */
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            border: 4px solid #2c3e50;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 4px 4px 0 #2c3e50;
+        }
+
+        h1 {
+            font-family: 'Permanent Marker', cursive;
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn {
+            font-family: 'Kalam', cursive;
+            font-weight: 700;
+            text-decoration: none;
+            color: #2c3e50;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-add {
+            font-size: 1.2rem;
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .article-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .article-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .article-item a:hover {
+            text-decoration: underline;
+        }
+
+        .article-date {
+            color: #95a5a6;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .article-actions a {
+            margin-left: 10px;
+            color: #95a5a6;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .article-actions a:hover {
+            color: #2c3e50;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 3px solid #2c3e50;
+            border-radius: 8px;
+            font-family: 'Kalam', cursive;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        textarea.form-control {
+            height: 200px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .btn-submit:hover {
+            background-color: #1a252f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
