@@ -1,0 +1,22 @@
+# Virtual Environment
+My_venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django Database
+db.sqlite3
+
+# Vercel and local environment configs
+.vercel/
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
